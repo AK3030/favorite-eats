@@ -50,15 +50,18 @@ const SlideContainer = styled.div`
 `
 
 const ArrowHolder = styled.div`
-  width: 100%;
-  height: auto;
-  position: absolute;
   display: flex;
   justify-content: space-between;
-  top: 48.7%;
-  opacity: .5;
-  z-index: 5;
-  align-items: center; 
+  align-items: center;
+  width: 100%;
+	height: auto;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: auto;
+  z-index: 2;
 `
 
 class App extends Component {
