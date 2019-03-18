@@ -1,5 +1,7 @@
 Live Demo: https://favorite-eats.herokuapp.com/
 
+Swipe or click the arrows to transition between pages.
+
 Nice to adds: 
 
 - Make slide component more modular and add generator helper
