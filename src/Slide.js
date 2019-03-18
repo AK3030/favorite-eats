@@ -7,6 +7,7 @@ import OasisGrillImage from './assets/oasisgrillimage.jpg';
 import SkewerLogoImage from './assets/skewer.svg';
 import UmamiBurgersImage from './assets/umamiburgers.jpg';
 import BurgerLogoImage from './assets/burger.svg';
+import SingleSlide from './SingleSlide';
 
 const MainDiv = styled.div`
   width: 100%;
@@ -57,62 +58,6 @@ const MainDiv = styled.div`
 
 `
 
-const TopDiv = styled.div`
-  height: 50%;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  flex-direction: column-reverse;
-`
-
-const BottomDiv = styled.div`
-  height: 50%;
-  width: 100%;
-  background-color: #141414;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
-
-const LittleStar = styled.img`
-  width: 100%;
-  height: auto;
-`
-
-const FoodLogo = styled.img`
-  width: 70px;
-  height: auto;
-  -webkit-filter: invert(1);
-`
-
-const Container = styled.div`
-  height: 100%;
-  width: 100%;
-`
-
-const FoodBackgroundDiv = styled.div`
-  height: 100%;
-  width: 100%;
-  background-image: url(${props => (props.image)});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const TitleText = styled.div`
-  font-family: roboto;
-  font-size: 35px;
-  background-color: rgba(0,0,0,.3);
-  color: white;
-  padding: 5px;
-  width: 100%;
-`
-
 class Slide extends Component {
 
   render() {
@@ -120,45 +65,23 @@ class Slide extends Component {
     return (
         <MainDiv>
           {this.props.slideIndex === 1? 
-            <Container>
-            <TopDiv>
-              <FoodBackgroundDiv image={LittleStarImage}>
-                <TitleText>
-                  LITTLE STAR PIZZA
-                </TitleText>
-              </FoodBackgroundDiv>
-            </TopDiv>
-            <BottomDiv>
-              <FoodLogo src={PizzaLogoImage}/>
-            </BottomDiv>
-          </Container>
+            <SingleSlide
+            titleText="LITTLE STAR PIZZA"
+            logoSource={PizzaLogoImage}
+            imageSource={LittleStarImage}
+            />
           : this.props.slideIndex === 2?
-          <Container>
-            <TopDiv>
-            <FoodBackgroundDiv image={OasisGrillImage}>
-              <TitleText>
-                    OASIS GRILL
-              </TitleText>
-            </FoodBackgroundDiv>
-            </TopDiv>
-            <BottomDiv>
-              <FoodLogo src={SkewerLogoImage}></FoodLogo>
-            </BottomDiv>
-          </Container>
+            <SingleSlide
+            titleText="OASIS GRILL"
+            logoSource={SkewerLogoImage}
+            imageSource={OasisGrillImage}
+            />
           :
-          <Container>
-            <TopDiv>
-            <FoodBackgroundDiv image={UmamiBurgersImage}>
-              <TitleText>
-                    UMAMI BURGER
-              </TitleText>
-            </FoodBackgroundDiv>
-            </TopDiv>
-            <BottomDiv>
-              <FoodLogo src={BurgerLogoImage}></FoodLogo>
-            </BottomDiv>
-          </Container>
-          
+            <SingleSlide
+            titleText="UMAMI BURGER"
+            logoSource={BurgerLogoImage}
+            imageSource={UmamiBurgersImage}
+            />
           }
           
         </MainDiv>
