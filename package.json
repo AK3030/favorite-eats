@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://AK3030.github.io/favorite-eats",
-  
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

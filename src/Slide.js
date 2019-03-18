@@ -124,7 +124,7 @@ class Slide extends Component {
             <TopDiv>
               <FoodBackgroundDiv image={LittleStarImage}>
                 <TitleText>
-                  LITTLESTAR PIZZA
+                  LITTLE STAR PIZZA
                 </TitleText>
               </FoodBackgroundDiv>
             </TopDiv>
