@@ -8,8 +8,7 @@ import SkewerLogoImage from './assets/skewer.svg';
 import UmamiBurgersImage from './assets/umamiburgers.jpg';
 import BurgerLogoImage from './assets/burger.svg';
 
-
-const BlueDiv = styled.div`
+const MainDiv = styled.div`
   width: 100%;
   height: 100%;
   background-color: purple;
@@ -37,7 +36,6 @@ const BlueDiv = styled.div`
     transform: translate(-100%);
     transition: transform 1000ms ease-in-out;
   }
-
 
   &.exampletwo-enter {
     transform: translate(-100%);
@@ -107,7 +105,7 @@ class Slide extends Component {
   render() {
 
     return (
-        <BlueDiv>
+        <MainDiv>
           {this.props.slideIndex === 1? 
             <Container>
             <TopDiv>
@@ -126,7 +124,6 @@ class Slide extends Component {
               <FoodLogo src={SkewerLogoImage}></FoodLogo>
             </BottomDiv>
           </Container>
-          
           :
           <Container>
             <TopDiv>
@@ -139,7 +136,7 @@ class Slide extends Component {
           
           }
           
-        </BlueDiv>
+        </MainDiv>
 
     );
   }
