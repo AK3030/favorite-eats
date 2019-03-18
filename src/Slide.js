@@ -25,7 +25,7 @@ const MainDiv = styled.div`
 
   &.example-enter-active {
     transform: translate(0%);
-    transition: transform 1000ms ease-in-out;
+    transition: transform 250ms ease-in-out;
   }
 
   &.example-exit {
@@ -34,7 +34,7 @@ const MainDiv = styled.div`
 
   &.example-exit.example-exit-active {
     transform: translate(-100%);
-    transition: transform 1000ms ease-in-out;
+    transition: transform 250ms ease-in-out;
   }
 
   &.exampletwo-enter {
@@ -43,7 +43,7 @@ const MainDiv = styled.div`
 
   &.exampletwo-enter-active {
     transform: translate(0%);
-    transition: transform 1000ms ease-in-out;
+    transition: transform 250ms ease-in-out;
   }
 
   &.exampletwo-exit {
@@ -52,7 +52,7 @@ const MainDiv = styled.div`
 
   &.exampletwo-exit.exampletwo-exit-active {
     transform: translate(100%);
-    transition: transform 1000ms ease-in-out;
+    transition: transform 250ms ease-in-out;
   }
 
 `
@@ -98,6 +98,19 @@ const FoodBackgroundDiv = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const TitleText = styled.div`
+  font-family: roboto;
+  font-size: 35px;
+  background-color: rgba(0,0,0,.3);
+  color: white;
+  padding: 5px;
+  width: 100%;
 `
 
 class Slide extends Component {
@@ -109,16 +122,24 @@ class Slide extends Component {
           {this.props.slideIndex === 1? 
             <Container>
             <TopDiv>
-              <FoodBackgroundDiv image={LittleStarImage}></FoodBackgroundDiv>
+              <FoodBackgroundDiv image={LittleStarImage}>
+                <TitleText>
+                  LITTLESTAR PIZZA
+                </TitleText>
+              </FoodBackgroundDiv>
             </TopDiv>
             <BottomDiv>
-              <FoodLogo src={PizzaLogoImage}></FoodLogo>
+              <FoodLogo src={PizzaLogoImage}/>
             </BottomDiv>
           </Container>
           : this.props.slideIndex === 2?
           <Container>
             <TopDiv>
-            <FoodBackgroundDiv image={OasisGrillImage}></FoodBackgroundDiv>
+            <FoodBackgroundDiv image={OasisGrillImage}>
+              <TitleText>
+                    OASIS GRILL
+              </TitleText>
+            </FoodBackgroundDiv>
             </TopDiv>
             <BottomDiv>
               <FoodLogo src={SkewerLogoImage}></FoodLogo>
@@ -127,7 +148,11 @@ class Slide extends Component {
           :
           <Container>
             <TopDiv>
-            <FoodBackgroundDiv image={UmamiBurgersImage}></FoodBackgroundDiv>
+            <FoodBackgroundDiv image={UmamiBurgersImage}>
+              <TitleText>
+                    UMAMI BURGER
+              </TitleText>
+            </FoodBackgroundDiv>
             </TopDiv>
             <BottomDiv>
               <FoodLogo src={BurgerLogoImage}></FoodLogo>

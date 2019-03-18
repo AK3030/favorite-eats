@@ -6,6 +6,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Route, Switch, withRouter } from 'react-router-dom';
 import Slide from './Slide';
 import {getPathInt, childFactoryCreator} from './util/util'
+import { Swipeable } from 'react-touch';
 
 const RightArrow = styled.img`
   width: 27px;
@@ -101,6 +102,7 @@ class App extends Component {
     return (
 
       <div className="App">
+        <Swipeable onSwipeLeft={this.incrementslideIndex} onSwipeRight={this.decrementslideIndex}>
         <ContainerDiv>
           <ArrowHolder>
             <LeftArrow onClick={this.decrementslideIndex} src={arrowImage}></LeftArrow>
@@ -113,7 +115,7 @@ class App extends Component {
                 <CSSTransition
                 key={this.props.location.key}
                 classNames={right? "example": "exampletwo"}
-                timeout={1000}>
+                timeout={250}>
                   <Switch location={this.props.location}>
                     <Route exact path="/1" render={() => (<Slide slideIndex={1}/>)} />
                     <Route exact path="/2" render={() => (<Slide slideIndex={2}/>)} />
@@ -124,6 +126,7 @@ class App extends Component {
             </SlideContainer>
           </MainDiv>
         </ContainerDiv>
+        </Swipeable>
         </div>
 
 

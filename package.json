@@ -7,6 +7,7 @@
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.4.0",
     "react-scripts": "2.1.8",
+    "react-touch": "^0.4.4",
     "react-transition-group": "^2.6.1",
     "styled-components": "^4.1.3"
   },
