@@ -1,0 +1,20 @@
+{
+  "main.css": "/favorite-eats/static/css/main.4a91c96a.chunk.css",
+  "main.js": "/favorite-eats/static/js/main.e40fd936.chunk.js",
+  "main.js.map": "/favorite-eats/static/js/main.e40fd936.chunk.js.map",
+  "runtime~main.js": "/favorite-eats/static/js/runtime~main.9ef1090a.js",
+  "runtime~main.js.map": "/favorite-eats/static/js/runtime~main.9ef1090a.js.map",
+  "static/js/2.c598a00d.chunk.js": "/favorite-eats/static/js/2.c598a00d.chunk.js",
+  "static/js/2.c598a00d.chunk.js.map": "/favorite-eats/static/js/2.c598a00d.chunk.js.map",
+  "index.html": "/favorite-eats/index.html",
+  "precache-manifest.60aeb7ce844c507952521cc284400851.js": "/favorite-eats/precache-manifest.60aeb7ce844c507952521cc284400851.js",
+  "service-worker.js": "/favorite-eats/service-worker.js",
+  "static/css/main.4a91c96a.chunk.css.map": "/favorite-eats/static/css/main.4a91c96a.chunk.css.map",
+  "static/media/LittleStar.jpg": "/favorite-eats/static/media/LittleStar.79f12265.jpg",
+  "static/media/burger.svg": "/favorite-eats/static/media/burger.172f6dfb.svg",
+  "static/media/oasisgrillimage.jpg": "/favorite-eats/static/media/oasisgrillimage.a2b0cd2e.jpg",
+  "static/media/pizzalogo3.svg": "/favorite-eats/static/media/pizzalogo3.0eb2a70f.svg",
+  "static/media/right-arrow.svg": "/favorite-eats/static/media/right-arrow.1ee4c3ee.svg",
+  "static/media/skewer.svg": "/favorite-eats/static/media/skewer.ef99412f.svg",
+  "static/media/umamiburgers.jpg": "/favorite-eats/static/media/umamiburgers.5b439f02.jpg"
+}
