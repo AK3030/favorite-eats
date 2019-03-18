@@ -3,7 +3,7 @@ import './App.css';
 import styled from 'styled-components'
 import arrowImage from './assets/right-arrow.svg';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import Slide from './Slide';
 import {getPathInt, childFactoryCreator} from './util/util'
 import { Swipeable } from 'react-touch';
@@ -102,6 +102,7 @@ class App extends Component {
     return (
 
       <div className="App">
+        <Route exact path="/" render={() => (<Redirect to="/1"/>)}/>
         <Swipeable onSwipeLeft={this.incrementslideIndex} onSwipeRight={this.decrementslideIndex}>
         <ContainerDiv>
           <ArrowHolder>
