@@ -96,18 +96,17 @@ class App extends Component {
   }
 
   render() {
-
     let right = this.isRightAnimation();
+    let pathInt = getPathInt(this.props.location.pathname);
 
     return (
-
       <div className="App">
         <Route exact path="/" render={() => (<Redirect to="/1"/>)}/>
         <Swipeable onSwipeLeft={this.incrementslideIndex} onSwipeRight={this.decrementslideIndex}>
         <ContainerDiv>
           <ArrowHolder>
-            <LeftArrow onClick={this.decrementslideIndex} src={arrowImage}></LeftArrow>
-            <RightArrow onClick = {this.incrementslideIndex} src={arrowImage}></RightArrow>
+            {pathInt === 1? <div/> : <LeftArrow onClick={this.decrementslideIndex} src={arrowImage}></LeftArrow>}
+            {pathInt === 3? <div/> : <RightArrow onClick = {this.incrementslideIndex} src={arrowImage}></RightArrow>}
           </ArrowHolder>
           <MainDiv>
             <SlideContainer>
@@ -129,11 +128,8 @@ class App extends Component {
         </ContainerDiv>
         </Swipeable>
         </div>
-
-
     );
   }
 }
-
 
 export default withRouter(App);
